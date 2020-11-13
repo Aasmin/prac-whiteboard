@@ -27,7 +27,7 @@ io.on("connection", function (socket) {
         socket.broadcast.emit("onmm", point);
     })
 })
-app.use(express.static("client"));
+app.use(express.static("Client"));
 app.get("/", function (req, res) {   //127.0.0.1 = localhost
     res.end("<h1>Welcome to home Page</h1>")
 })
