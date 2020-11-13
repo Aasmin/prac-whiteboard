@@ -28,9 +28,9 @@ io.on("connection", function (socket) {
     })
 })
 app.use(express.static("Client"));
-app.get("/", function (req, res) {   //127.0.0.1 = localhost
-    res.end("<h1>Welcome to home Page</h1>")
-})
+// app.get("/", function (req, res) {   //127.0.0.1 = localhost
+//     res.end("<h1>Welcome to home Page</h1>")
+// })
 
 //  connection - server machine hai jo listen krti | 3000 = port 
 let port = process.env.PORT || 3000;
