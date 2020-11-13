@@ -1,10 +1,3 @@
-//npm init -y
-//npm install express
-//npm install socket.io 
-// npm install electron-packager -g
-// Install scripts from: https://www.christianengvall.se/electron-packager-tutorial/ 
-//To start server: node app
-
 // server side
 const express = require("express");
 // express server
@@ -49,7 +42,3 @@ const port = process.env.PORT || 3000;
 server.listen(port, function(req, res) {
   console.log("Server has started at port 3000");
 });
-
-//Types of request: Get, Post, Patch(Update), Delete
-
-  
