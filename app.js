@@ -20,17 +20,17 @@ io.on("connection", function (socket) {
         console.log(data);
         socket.broadcast.emit('colorchange', color);
     })
+    socket.on("md", function (point) {
+        socket.broadcast.emit("onmd", point);
+    })
+    socket.on("mm", function (point) {
+        socket.broadcast.emit("onmm", point);
+    })
 })
-socket.on("md", function (point) {
-    socket.broadcast.emit("onmd", point);
+app.use(express.static("client"));
+app.get("/", function (req, res) {   //127.0.0.1 = localhost
+    res.end("<h1>Welcome to home Page</h1>")
 })
-socket.on("mm", function (point) {
-    socket.broadcast.emit("onmm", point);
-})
-
-// app.get("/home", function (req, res) {   //127.0.0.1 = localhost
-//     res.end("<h1>Welcome to home Page</h1>")
-// })
 
 //  connection - server machine hai jo listen krti | 3000 = port 
 let port = process.env.PORT || 3000;
