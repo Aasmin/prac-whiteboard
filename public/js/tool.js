@@ -1,3 +1,13 @@
+//npm init -y
+//npm install express
+//npm install socket.io 
+//npm install electron --save-dev
+// npm install electron-packager --save-dev
+// Install scripts from: https://www.christianengvall.se/electron-packager-tutorial/ 
+// "start": "electron .",
+// "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds"
+// npm run package-mac
+//To start server: node app
 // connect to socket server
 const socket = io.connect("https://prac-whiteboard.herokuapp.com/");
 // *********************************Basic Setup
